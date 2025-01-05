@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 반응형 -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"> <!-- 브라우저에 표시죌 아이콘 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Order summary card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    p{
+      margin: 2px;
+      font-family: "Red Hat Display", serif;
+      font-optical-sizing: auto;
+      font-weight: 500;
+      font-style: normal;
+      color:hsl(224, 23%, 55%);
+    }
+
+    #box{      
+      display: flex;
+      flex-direction: column;
+      align-items:center;
+      justify-content: center;
+      width: 350px;
+      height: 600px;
+      border-radius: 20px;
+      background-color: hsl(0, 0%, 100%);
+      overflow: hidden;
+    }
+
+    body{
+      margin: 0px;
+      display: flex; 
+      flex-direction: column;
+      justify-content: center; /* 세로로 중앙 좌르르 */
+      align-items:center; /* 가로로 중앙 좌르르 */
+      text-align: center; 
+      width:100vw;
+      height:100vh;
+      font-size: 16px; 
+      color: hsl(228, 45%, 44%);
+      background-color: hsl(225, 100%, 94%);
+      background-image: url("images/pattern-background-desktop.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    #minibox{
+      display: flex;
+      flex-direction:row;
+      justify-content: center; /* 세로로 중앙 좌르르 */
+      align-items:center; /* 가로로 중앙 좌르르 */
+      width: 300px;
+      height: 80px;
+      margin: 20px;
+      margin-top: 30px;
+      border-radius: 10px;
+      background-color:hsl(225, 100%, 98%);
+    }
+
+    #icon_music{
+      width:"25px"; 
+      height:"25px";
+      margin:0;
+      padding:10px;
+    }
+
+    #textbox{
+      margin:0;
+      padding:10px;
+      padding-right: 50px;
+    }
+
+    #p_box{
+      display: flex;
+      width: 300px;
+      border-radius: 10px;
+      height: 50px;
+      margin: 0px;
+      margin-bottom: 0px;
+      justify-content: center; /* 세로로 중앙 좌르르 */
+      align-items:center; /* 가로로 중앙 좌르르 */
+      background-color:hsl(245, 75%, 52%);
+      font-family: "Red Hat Display", serif;
+      font-optical-sizing: auto;
+      font-weight: 700;
+      font-style: normal;
+      color:aliceblue;
+    }
+
+    #p_box:hover{
+      background-color:hsl(245, 75%, 65%);
+    }
+
+    #c_box{
+      display: flex;
+      width: 300px;      
+      border-radius: 10px;
+      height: 40px;
+      margin: 20px;
+      justify-content: center; /* 세로로 중앙 좌르르 */
+      align-items:center; /* 가로로 중앙 좌르르 */
+      font-family: "Red Hat Display", serif;
+      font-optical-sizing: auto;
+      font-weight: 700;
+      font-style: normal;
+      color:hsl(224, 23%, 55%);
+    }
+
+    #c_box:hover{
+      color:hsl(223, 47%, 23%);
+    }
+
+    h2{
+      margin-top: 40px;
+      font-family: "Red Hat Display", serif;
+      font-optical-sizing: auto;
+      font-weight: 900;
+      font-style: normal;
+      color: hsl(223, 47%, 23%);
+    }
+
+    h4{
+      margin-top: 0px;
+      margin-bottom: 0px;
+      font-family: "Red Hat Display", serif;
+      font-optical-sizing: auto;
+      font-weight: 900;
+      font-style: normal;
+      color: hsl(223, 47%, 23%);
+    }
+
+    #p_button{
+      text-decoration: underline;
+      font-weight: 700;
+      color:hsl(245, 75%, 52%);
+    }
+    
+    #p_button:hover{
+      text-decoration: none;
+      color:hsl(245, 75%, 65%);
+    }
+
+    @media(max-width:375px){
+        body{
+          background-image: none;
+          background-color: hsl(225, 100%, 94%);
+
+        }
+
+      }
+
+  </style>
+</head>
+<body>
+
+  <div id="box">
+    <img src="./images/illustration-hero.svg" width="350px">
+    <h2>Order Summary</h2>
+    <p>You can now listen to millions of songs, </p>
+    <p>audiobooks, and podcasts on any device </p>
+    <p>anywhere you like!</p>
+  
+    <div id="minibox">
+      <img src="./images/icon-music.svg" id="icon_music">
+      <div id="textbox">
+        <h4>Annual Plan</h4>
+        <p>$59.99/year</p>
+      </div>
+
+      <p id="p_button">Change</p>
+    </div>
+ 
+    <div id="p_box">
+      Proceed to Payment
+    </div>
+
+    <div id="c_box">
+      Cancel Order
+    </div>
+    
+  </div>
+
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">SungHaeun</a>.
+  </div>
+</body>
+</html>
